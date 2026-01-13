@@ -1,0 +1,576 @@
+<!--
+AURORA — Japan-tailored website mockup (BBB4MI)
+Single-page multi-section site with anchor navigation.
+Files: index.html, styles.css, script.js
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<!--
+AURORA 
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+Single-page multi-section site with anchor navigation.
+Files: aurora.html, aurora.css, aurora.js
+-->
+  <!-- Noto Sans JP + Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Noto+Sans+JP:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="aurora.css" />
+</head>
+<body>
+  <a class="skip-link" href="#home">Skip to content</a>
+
+  <!-- Header / Nav -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="AURORA Home">
+        <span class="brand-mark">AURORA</span>
+        <span class="brand-sub">Japan Edition</span>
+      </a>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">
+          Menu
+        </button>
+        <div class="nav-menu" id="navMenu">
+          <a href="#home">Home</a>
+          <a href="#product">製品 / Product</a>
+          <a href="#why">AURORAについて</a>
+          <a href="#purchase">購入・詳細</a>
+          <a href="#support">サポート</a>
+
+          <div class="lang">
+            <button class="chip is-active" type="button" aria-pressed="true">JP</button>
+            <button class="chip" type="button" aria-pressed="false">EN</button>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" role="main">
+    <!-- 1) HOMEPAGE -->
+    <section id="home" class="section hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">WINTER URBAN ESSENTIAL / 冬の都市生活に</p>
+
+          <h1 class="h1">
+            Quiet comfort.<br />
+            Ready for wet winter streets.
+          </h1>
+
+          <p class="lead">
+            Waterproof protection and insulated warmth in a minimalist slip-on mule—designed for everyday winter movement.
+          </p>
+
+          <p class="subtle jp">
+            防水・保温提醒。静かなデザインで、冬の日常に。
+          </p>
+
+          <div class="cta-row">
+            <a class="btn btn-outline" href="#product">Discover AURORA</a>
+            <a class="link" href="#purchase">View details</a>
+          </div>
+
+          <div class="micro">
+            <div class="micro-item">
+              <span class="dot"></span>
+              <span>Calm presentation · Clear product details</span>
+            </div>
+            <div class="micro-item">
+              <span class="dot"></span>
+              <span>Mid-premium · $180 CAD</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product visual (SVG placeholder so it runs without images) -->
+        <div class="hero-visual" aria-label="Product image">
+          <div class="product-card">
+            <div class="product-svg" aria-hidden="false">
+              <!-- Use the provided product photo -->
+              <img src="pics/mule1.jpeg" alt="AURORA Waterproof Winter Mule" />
+            </div>
+            <div class="product-meta">
+              <div>
+                <p class="product-name">AURORA Waterproof Winter Mule</p>
+                <p class="product-desc">Minimal slip-on comfort for cold, wet city days.</p>
+              </div>
+              <div class="price">
+                <p class="price-amt">$180 CAD</p>
+                <p class="price-note">Final JPY shown at checkout</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Feature cards -->
+      <div class="container">
+        <div class="feature-grid">
+          <article class="feature-card">
+            <div class="icon" aria-hidden="true">💧</div>
+            <h3>Waterproof outer</h3>
+            <p>Protection against rain, slush, and wet sidewalks.</p>
+          </article>
+          <article class="feature-card">
+            <div class="icon" aria-hidden="true">❄️</div>
+            <h3>Insulated lining</h3>
+            <p>Soft fleece/shearling comfort for cold commutes.</p>
+          </article>
+          <article class="feature-card">
+            <div class="icon" aria-hidden="true">⟂</div>
+            <h3>Slip-resistant sole</h3>
+            <p>Stable grip for winter city surfaces.</p>
+          </article>
+          <article class="feature-card">
+            <div class="icon" aria-hidden="true">◻︎</div>
+            <h3>Minimal form</h3>
+            <p>Designed to pair quietly with everyday outfits.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Editorial strip -->
+    <section class="section strip">
+      <div class="container strip-inner">
+        <p class="strip-text">
+          Built for ordinary winter days—walk to class, commute to work, step out briefly with confidence.
+        </p>
+      </div>
+    </section>
+
+    <!-- Materials & Craft -->
+    <section class="section" aria-labelledby="craftTitle">
+      <div class="container split">
+        <div>
+          <h2 id="craftTitle" class="h2">Designed with practical precision.</h2>
+          <ul class="bullets">
+            <li>Sealed waterproof exterior</li>
+            <li>Insulated lining for warmth retention</li>
+            <li>Cold-rated outsole designed for winter traction</li>
+            <li>Minimal seams, easy slip-on structure</li>
+          </ul>
+          <p class="muted">
+            Clear information supports a calm purchase experience—designed for trust and daily reliability.
+          </p>
+        </div>
+
+        <div class="thumb-grid" aria-label="Material close-up placeholders">
+          <div class="thumb t1">
+            <img src="pics/aurora_exterior.jpeg" alt="Exterior close-up" class="thumb-img" />
+            <span class="thumb-bubble">Exterior</span>
+          </div>
+          <div class="thumb t2">
+            <img src="pics/aurora_lining.jpeg" alt="Lining close-up" class="thumb-img" />
+            <span class="thumb-bubble">Lining</span>
+          </div>
+          <div class="thumb t3">
+            <img src="pics/aurora_sole.jpeg" alt="Sole close-up" class="thumb-img" />
+            <span class="thumb-bubble">Sole</span>
+          </div>
+          <div class="thumb t4">
+            <img src="pics/aurora_finish.jpeg" alt="Finish close-up" class="thumb-img" />
+            <span class="thumb-bubble">Finish</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust / Service -->
+    <section class="section soft" aria-labelledby="trustTitle">
+      <div class="container">
+        <h2 id="trustTitle" class="h2">Service designed for clarity.</h2>
+        <div class="trust-row">
+          <div class="trust-item">
+            <div class="trust-icon" aria-hidden="true">◎</div>
+            <div>
+              <h3>Transparent pricing</h3>
+              <p>Clear product and service details.</p>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon" aria-hidden="true">↺</div>
+            <div>
+              <h3>Straightforward returns</h3>
+              <p>Simple process, clearly stated conditions.</p>
+            </div>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon" aria-hidden="true">✶</div>
+            <div>
+              <h3>Support</h3>
+              <p>Sizing guidance and product care information.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2) PRODUCT PAGE -->
+    <section id="product" class="section" aria-labelledby="productTitle">
+      <div class="container">
+        <div class="page-head">
+          <h2 id="productTitle" class="h2">製品 / Product</h2>
+          <p class="muted">Organized details for confident winter purchasing.</p>
+        </div>
+
+        <div class="product-grid">
+          <div class="product-gallery">
+            <div class="gallery-main">
+              <div class="gallery-placeholder">
+                <img src="pics/sand_beige.jpeg" alt="Product image" class="product-img" />
+              </div>
+            </div>
+            <div class="gallery-thumbs">
+              <button class="thumb-btn is-active" type="button" aria-label="View exterior">Exterior</button>
+              <button class="thumb-btn" type="button" aria-label="View lining">Lining</button>
+              <button class="thumb-btn" type="button" aria-label="View sole">Sole</button>
+              <button class="thumb-btn" type="button" aria-label="View lifestyle">Lifestyle</button>
+            </div>
+          </div>
+
+          <aside class="buy-box" aria-label="Purchase summary">
+            <p class="buy-name">AURORA Waterproof Winter Mule</p>
+            <p class="buy-sub">Waterproof comfort mule for urban winter.</p>
+
+            <div class="buy-price">
+              <span class="amt">$180 CAD</span>
+              <span class="note">Price in CAD · Final JPY shown at checkout</span>
+            </div>
+
+            <div class="field">
+              <label for="color">Color</label>
+              <select id="color">
+                <option>Winter Cream</option>
+                <option>Sand Beige</option>
+                <option>Soft Dune</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="size">Size (JP)</label>
+              <select id="size">
+                <option value="">Select JP size</option>
+                <option>23</option>
+                <option>24</option>
+                <option>25</option>
+                <option>26</option>
+              </select>
+              <p class="hint"><a href="#sizeGuide" class="link">View size guide</a></p>
+            </div>
+
+            <button class="btn btn-outline btn-full" type="button" id="addToCart">Add to Cart</button>
+            <p class="fineprint">Japan shipping available · Tracking provided after dispatch</p>
+
+            <div class="divider"></div>
+
+            <ul class="checklist">
+              <li>Waterproof exterior</li>
+              <li>Insulated fleece/shearling lining</li>
+              <li>Cold-rated, slip-resistant outsole</li>
+            </ul>
+          </aside>
+        </div>
+
+        <!-- Feature modules -->
+        <div class="modules">
+          <article class="module">
+            <div class="module-copy">
+              <h3>Waterproof exterior for wet winter days.</h3>
+              <ul>
+                <li>Helps prevent water absorption from rain and slush</li>
+                <li>Wipes clean with a soft cloth</li>
+                <li>Built for everyday city surfaces</li>
+              </ul>
+            </div>
+            <div class="module-visual">
+              <img src="pics/outside.jpeg" alt="Waterproof close-up" class="module-img" />
+            </div>
+          </article>
+
+          <article class="module">
+            <div class="module-copy">
+              <h3>Soft warmth that stays comfortable.</h3>
+              <ul>
+                <li>Insulated fleece/shearling lining</li>
+                <li>Comfort-first feel for short outings and commutes</li>
+                <li>Breathable for indoor transitions</li>
+              </ul>
+            </div>
+            <div class="module-visual">
+              <img src="pics/lining.jpeg" alt="Lining close-up" class="module-img" />
+            </div>
+          </article>
+
+          <article class="module">
+            <div class="module-copy">
+              <h3>Stable traction when streets are slick.</h3>
+              <ul>
+                <li>Winter-oriented outsole pattern</li>
+                <li>Slip-resistant grip for daily walking</li>
+                <li>Cushioned step for urban movement</li>
+              </ul>
+            </div>
+            <div class="module-visual">
+              <img src="pics/urban_movement.jpeg" alt="Sole close-up" class="module-img" />
+            </div>
+          </article>
+        </div>
+
+        <!-- Specifications table -->
+        <div class="specs">
+          <h3 class="h3">Specifications</h3>
+          <div class="spec-table" role="table" aria-label="Product specifications">
+            <div class="row" role="row">
+              <div class="cell k" role="cell">Outer</div>
+              <div class="cell v" role="cell">Waterproof treated material</div>
+            </div>
+            <div class="row" role="row">
+              <div class="cell k" role="cell">Lining</div>
+              <div class="cell v" role="cell">Fleece / shearling blend</div>
+            </div>
+            <div class="row" role="row">
+              <div class="cell k" role="cell">Sole</div>
+              <div class="cell v" role="cell">Cold-rated rubber outsole</div>
+            </div>
+            <div class="row" role="row">
+              <div class="cell k" role="cell">Fit</div>
+              <div class="cell v" role="cell">True to size (see size guide)</div>
+            </div>
+            <div class="row" role="row">
+              <div class="cell k" role="cell">Use</div>
+              <div class="cell v" role="cell">Urban winter · Everyday casual</div>
+            </div>
+            <div class="row" role="row">
+              <div class="cell k" role="cell">Care</div>
+              <div class="cell v" role="cell">Wipe clean · Air dry</div>
+            </div>
+            <div class="row" role="row">
+              <div class="cell k" role="cell">Design</div>
+              <div class="cell v" role="cell">Designed for cold, wet winters</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3) WHY AURORA? -->
+    <section id="why" class="section soft" aria-labelledby="whyTitle">
+      <div class="container">
+        <div class="center">
+          <h2 id="whyTitle" class="h2">AURORAについて / Why AURORA?</h2>
+          <p class="lead narrow">
+            Comfort should not compromise practicality. AURORA is designed for winter reality: wet sidewalks, cold air,
+            and daily movement—supported by clear information.
+          </p>
+        </div>
+
+        <div class="pillar-grid">
+          <article class="pillar">
+            <h3>Reliability</h3>
+            <p>Made for the conditions you actually face in winter cities.</p>
+          </article>
+          <article class="pillar">
+            <h3>Quiet design</h3>
+            <p>Minimal styling that fits naturally into everyday wardrobes.</p>
+          </article>
+          <article class="pillar">
+            <h3>Clarity</h3>
+            <p>Straightforward details, sizing guidance, and product care.</p>
+          </article>
+        </div>
+
+        <div class="split mt">
+          <div>
+            <h3 class="h3">Designed for winter cities.</h3>
+            <p class="muted">
+              A subtle blend of comfort and function—presented with calm structure so customers can choose with confidence.
+            </p>
+          </div>
+          <div class="map-card" aria-label="Subtle winter city graphic">
+            <div class="map-line"></div>
+            <div class="map-line"></div>
+            <div class="map-line"></div>
+            <p class="map-caption">Urban winter focus · Minimal design language</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4) PURCHASE / DETAILS -->
+    <section id="purchase" class="section" aria-labelledby="purchaseTitle">
+      <div class="container">
+        <div class="page-head">
+          <h2 id="purchaseTitle" class="h2">購入・詳細 / Purchase</h2>
+          <p class="muted">Clear steps, clear information.</p>
+        </div>
+
+        <div class="purchase-grid">
+          <div class="card">
+            <h3 class="h3">Price</h3>
+            <p class="big">$180 CAD</p>
+            <p class="muted">Currency shown in CAD. Local taxes and final JPY total calculated at checkout.</p>
+
+            <div class="divider"></div>
+
+            <h3 class="h3">What’s included</h3>
+            <ul class="bullets">
+              <li>AURORA Waterproof Winter Mule</li>
+              <li>Care information card</li>
+              <li>Simple packaging (recyclable where possible)</li>
+            </ul>
+          </div>
+
+          <div class="card" id="sizeGuide">
+            <h3 class="h3">Size guide</h3>
+
+            <div class="tabs" role="tablist" aria-label="Size guide tabs">
+              <button class="tab is-active" type="button" role="tab" aria-selected="true" data-tab="jp">JP Size</button>
+              <button class="tab" type="button" role="tab" aria-selected="false" data-tab="cm">CM</button>
+              <button class="tab" type="button" role="tab" aria-selected="false" data-tab="us">US</button>
+            </div>
+
+            <div class="tabpanels">
+              <div class="panel is-active" role="tabpanel" data-panel="jp">
+                <div class="table">
+                  <div class="trow thead">
+                    <div>JP</div><div>CM</div><div>Notes</div>
+                  </div>
+                  <div class="trow"><div>23</div><div>23.0</div><div>Standard fit</div></div>
+                  <div class="trow"><div>24</div><div>24.0</div><div>Standard fit</div></div>
+                  <div class="trow"><div>25</div><div>25.0</div><div>Standard fit</div></div>
+                  <div class="trow"><div>26</div><div>26.0</div><div>If between sizes, consider half-up</div></div>
+                </div>
+              </div>
+
+              <div class="panel" role="tabpanel" data-panel="cm">
+                <p class="muted">Use centimeters for precise sizing.</p>
+                <div class="table">
+                  <div class="trow thead">
+                    <div>CM</div><div>Suggested JP</div><div>Notes</div>
+                  </div>
+                  <div class="trow"><div>23.0</div><div>23</div><div>Standard fit</div></div>
+                  <div class="trow"><div>24.0</div><div>24</div><div>Standard fit</div></div>
+                  <div class="trow"><div>25.0</div><div>25</div><div>Standard fit</div></div>
+                  <div class="trow"><div>26.0</div><div>26</div><div>Thicker socks: consider sizing up</div></div>
+                </div>
+              </div>
+
+              <div class="panel" role="tabpanel" data-panel="us">
+                <p class="muted">Conversion shown as a helpful reference.</p>
+                <div class="table">
+                  <div class="trow thead">
+                    <div>US</div><div>JP</div><div>Notes</div>
+                  </div>
+                  <div class="trow"><div>5</div><div>23</div><div>Approximate</div></div>
+                  <div class="trow"><div>6</div><div>24</div><div>Approximate</div></div>
+                  <div class="trow"><div>7</div><div>25</div><div>Approximate</div></div>
+                  <div class="trow"><div>8</div><div>26</div><div>Approximate</div></div>
+                </div>
+              </div>
+            </div>
+
+            <p class="fineprint">
+              If you prefer thicker socks in winter, consider sizing up.
+            </p>
+          </div>
+        </div>
+
+        <div class="shipping card">
+          <h3 class="h3">Shipping in Japan</h3>
+          <ul class="bullets">
+            <li>Japan shipping available</li>
+            <li>Estimated delivery window shown at checkout</li>
+            <li>Tracking provided after dispatch</li>
+            <li>Returns policy presented clearly before purchase</li>
+          </ul>
+        </div>
+
+        <div class="assurance card">
+          <h3 class="h3">安心して選べる情報設計</h3>
+          <p class="muted">
+            AURORA presents materials, fit guidance, and care information clearly. Our goal is a calm purchase experience
+            supported by reliable details.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Support -->
+    <section id="support" class="section soft" aria-labelledby="supportTitle">
+      <div class="container split">
+        <div>
+          <h2 id="supportTitle" class="h2">サポート / Support</h2>
+          <p class="muted">
+            If you have questions about sizing, care, or winter use, please review the information below.
+          </p>
+          <div class="faq">
+            <details>
+              <summary>How should I clean AURORA?</summary>
+              <p>Wipe the exterior with a soft cloth. Air dry naturally. Avoid direct heat sources.</p>
+            </details>
+            <details>
+              <summary>Can I wear AURORA indoors?</summary>
+              <p>Yes. The lining is comfortable for indoor transitions. The outsole is designed for winter surfaces.</p>
+            </details>
+            <details>
+              <summary>What if I am between sizes?</summary>
+              <p>Consider sizing up, especially if you wear thicker socks during winter.</p>
+            </details>
+          </div>
+        </div>
+
+        <div class="contact card">
+          <h3 class="h3">Contact</h3>
+          <p class="muted">Customer support is presented clearly to support confident purchasing.</p>
+          <div class="contact-grid">
+            <div>
+              <p class="label">Email</p>
+              <p class="value">support@aurora.example</p>
+            </div>
+            <div>
+              <p class="label">Hours</p>
+              <p class="value">10:00–18:00 JST</p>
+            </div>
+          </div>
+          <p class="fineprint">Replace with your preferred contact info for the assignment mockup.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-brand">AURORA</p>
+        <p class="muted">Minimal winter comfort for urban life.</p>
+      </div>
+
+      <div>
+        <p class="footer-title">Product</p>
+        <a href="#product">製品 / Product</a>
+        <a href="#why">AURORAについて</a>
+      </div>
+
+      <div>
+        <p class="footer-title">Purchase</p>
+        <a href="#purchase">購入・詳細</a>
+        <a href="#sizeGuide">Size guide</a>
+      </div>
+
+      <div>
+        <p class="footer-title">Support</p>
+        <a href="#support">サポート</a>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p class="fineprint">© <span id="year"></span> AURORA. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="aurora.js"></script>
+</body>
+</html>
